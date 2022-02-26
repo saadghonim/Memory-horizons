@@ -1,0 +1,240 @@
+// media
+@mixin xxs {
+    @media only screen and (max-width: 500px) {
+        @content;
+    }
+}
+@mixin xs {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin sm {
+    @media only screen and (max-width: 991px) {
+        @content;
+    }
+}
+@mixin md {
+    @media only screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media only screen and (max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin min_ {
+  @media only screen and (min-width: 992px) {
+      @content;
+  }
+}
+@mixin min_xs {
+  @media only screen and (min-width: 768px) {
+      @content;
+  }
+}
+
+@mixin en{
+  html[dir="ltr"] & {
+      @content;
+  }
+}
+@mixin ar{
+  html[dir="rtl"] & {
+      @content;
+  }
+}
+@mixin d_flex_c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin btn_m{
+  @include d_flex_c;
+  width: 38px;
+  height: 38px;
+  border: 2px solid $color_2;
+  font-size: $font_s ;
+  color: $color_2;
+  margin-inline-end: 10px;
+}
+
+@mixin drop_d{
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+@mixin btn_gh{
+  height: $height_btn;
+  font-size: $font_s;
+  font-weight: 600;
+}
+@mixin acpict_r {
+  position: absolute;
+  top: 0;
+  left: 00;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// ~~~~~~~~~~~~~~~~~~~owl-nav~~~~~~~~~~~
+@mixin owl-nav_{
+    .owl-nav {
+    display: flex;
+    justify-content: space-between;
+      button.owl-next,
+      button.owl-prev {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+      background-color: $main_color;
+    }
+  }
+  button.owl-next{
+    left: 30px;
+  }
+  button.owl-prev{
+    right: 30px;
+  }
+
+  }
+  @include xs{
+    .owl-nav{
+      display: none;
+    }
+  }
+}
+@mixin owl-nav_2{
+  .owl-nav {
+  display: flex;
+  justify-content: space-between;
+    button.owl-next,
+    button.owl-prev {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 35%;
+  color: $color_4;
+  font-size: 22px;
+  transition: .5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover{
+    color: $main_color;
+  }
+}
+button.owl-next{
+  left: -30px;
+}
+button.owl-prev{
+  right: -30px;
+}
+
+}
+@include xs{
+  .owl-nav{
+    display: none;
+  }
+}
+}
+
+.title_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  .title_{
+    font-size: $font_s + 6;
+    font-weight: 700;
+    color: $color_2;
+    text-transform: capitalize;
+  }
+  .anc_more{
+    font-size: $font_s;
+    color: #8ea4b2;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: .5s;
+    &:hover{
+      color: $main_color;
+    }
+  }
+  @include xs{
+    .title_{
+    font-size: $font_s + 4;
+    }
+  }
+}
+  @mixin angle_ {
+    &::after{
+      font-family: "Font Awesome 5 Free";
+      content: "\f107";
+      position: absolute;
+      color: $color_1;
+      top: -11px;
+      font-size: 15px;
+      line-height: 3.273;
+      font-weight: 900;
+      transition: .5s;
+      @include ar{
+        left: 15px;
+      }
+      @include en{
+        right: 15px;
+      }
+    }
+    &[aria-expanded="true"]::after{
+      content: "\f106";
+    }
+  }
+// ~~~~~~~~~~~~~dots
+  @mixin dots_{
+    .owl-dots{
+      display: block;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translatex(-50%);
+      color: $main_color;
+      z-index: 9999;
+
+      .owl-dot{
+        width: 10px;
+        height: 10px;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 50%;
+        &:not(:last-child){
+            margin-inline-end: 7px;
+        }
+    }
+    .active{
+      background-color: $main_color;
+      opacity: 1;
+      transform: scale(1.2);
+      outline: 0;
+    }
+    @include xs{
+      .owl-dot{
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  }

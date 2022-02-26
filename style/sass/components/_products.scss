@@ -1,0 +1,113 @@
+.new_parant{
+  padding: 60px 0 50px ;
+
+
+}
+
+.new{
+    @include owl-nav_2;
+    .owl-dots{
+      display: none;
+    }
+  .item{
+    padding: 15px 0;
+  }
+  .slid_div_n{
+    transition: .5s;
+    &:hover{
+      box-shadow: 0px 0px 25px 0px rgba(22, 22, 22, 0.1);
+      .img_div{
+        border-color:transparent;
+      }
+    }
+    .img_div{
+      border: 1px solid #f2f2f2;
+      padding: 40px 10px;
+      .anc_new{
+        display: block;
+      }
+    }
+    .content_{
+      text-align: center;
+      padding: 20px 0 30px;
+      .anc_products{
+        font-size: $font_s;
+        color: $color_2;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        transition: .5s;
+        &:hover{
+          color: $main_color;
+        }
+      }
+      .price{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+          margin-inline-end: 5px;
+          font-size: $font_s;
+          font-weight: 500;
+          color: #8ea4b2;
+          margin-bottom: 4px;
+          text-decoration: line-through;
+        }
+        p{
+          font-size: $font_s;
+          font-weight: 700;
+          color: $main_color;
+        }
+      }
+    }
+  }
+}
+.Special_Off, .Computer, .motherboard{
+  margin-bottom: 30px
+  }
+  .screens{
+    margin-bottom: 100px;
+  }
+  .Computer{
+    .slid_div_n {
+      .img_div{
+        padding: 40px 5px;
+      }
+    }
+  }
+@include xs{
+  .new_parant{
+    padding: 30px 0 50px ;
+  }
+  .screens{
+    margin-bottom: 30px;
+  }
+  .new{
+    .slid_div_n{
+      transition: .5s;
+      &:hover{
+        box-shadow: none;
+        .img_div{
+          border-color:#f2f2f2;
+          padding:10px 5px;
+        }
+      }
+      .img_div{
+        padding:10px 5px;
+      }
+      .content_{
+        .price{
+          flex-direction: column-reverse;
+          span{
+            margin: 0;
+          }
+        }
+      }
+    }
+    @include dots_;
+    .owl-dots{
+      bottom: 14px;
+
+    }
+  }
+}

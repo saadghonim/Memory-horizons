@@ -1,0 +1,91 @@
+body {
+    font-family     : "Frutiger";
+    font-weight     : normal;
+    font-style      : normal;
+    overflow-x      : hidden;
+}
+
+.ul_gh {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .m_P_gh {
+    padding: 0;
+    margin: 0;
+  }
+  .anc_gh {
+    display: inline-block;
+  }
+  .anc_gh:hover {
+    text-decoration: none;
+  }
+  .btn_gh {
+    border          : none;
+    padding         : 0;
+    background-color: transparent;
+    border          : none;
+    display         : block;
+    cursor          : pointer;
+    outline         : none !important;
+    transition      : 0.5s;
+  }
+  .d_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .moboverlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    overflow: hidden;
+  }
+  .over_{
+    overflow-y: hidden;
+  }
+  img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 100px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $color_2; 
+
+  }
+  
+
+
+  .preloader-sa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img{
+      &:first-child{
+        margin-bottom: 20px;
+        animation: spin 2s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(-360deg); }
+      }
+    }
+}
