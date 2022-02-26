@@ -146,12 +146,13 @@ footer{
         font-size: $font_s;
         width: 100%;
         height: 100%;
+        margin-bottom: 20px;
         text-align: start;
         cursor: pointer;
         @include angle_;
 
       }
-  
+
     }
     .newslatter{
       padding-top: 40px;
