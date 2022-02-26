@@ -176,15 +176,26 @@ header{
         color: #f0f0f0;
         font-size: $font_s;
         font-weight: 700;
-        text-transform: uppercase;
+        text-transform: capitalize;
         
         span{
           display: flex;
           align-items: center;
           i{
             margin-inline-end: 5px;
+
           }
         }
+      }
+      @include en{
+        .all_sections{
+          span{
+            i{
+              margin-bottom: 3px;
+            }
+          }
+        }
+
       }
       .ul_sub_menu{
         position: absolute;
@@ -216,6 +227,7 @@ header{
           color: $color_2;
           transition: .5s;
           font-weight: 500;
+          line-height: 1.4;
           &:hover{
             color: $main_color;
           }

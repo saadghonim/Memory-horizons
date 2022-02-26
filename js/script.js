@@ -8,7 +8,6 @@ $(document).ready(function(){
 //~~~~~~~~~~~~~nav~~~~~~~~
 
 if ($(window).width() <= 767){
-
   $(".all_sections").click(function(){
     $(".ul_sub_menu").slideToggle("500")
   })
@@ -19,6 +18,7 @@ $('.slider .owl-carousel').owlCarousel({
     loop:true,
     nav:true,
     rtl:true,
+    autoplay:true,
     rtl: $("html").attr("dir") == "rtl" ? true : false,
     navText: ["<i class='fas fa-angle-right'></i>", "<i class='fas fa-angle-left'></i>"],
     responsive:{
@@ -37,6 +37,7 @@ $('.slider .owl-carousel').owlCarousel({
 $('.new .owl-carousel').owlCarousel({
   loop:true,
   nav:true,
+  autoplay:true,
   margin:15,
   stagePadding: 10,
   rtl:true,

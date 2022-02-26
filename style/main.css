@@ -459,7 +459,7 @@ header nav .all_sections_parant .all_sections {
   color: #f0f0f0;
   font-size: 16px;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 header nav .all_sections_parant .all_sections span {
@@ -474,6 +474,10 @@ header nav .all_sections_parant .all_sections span {
 header nav .all_sections_parant .all_sections span i {
   -webkit-margin-end: 5px;
           margin-inline-end: 5px;
+}
+
+html[dir="ltr"] header nav .all_sections_parant .all_sections span i {
+  margin-bottom: 3px;
 }
 
 header nav .all_sections_parant .ul_sub_menu {
@@ -509,6 +513,7 @@ header nav .all_sections_parant .ul_sub_menu .anc_sub_menu {
   -webkit-transition: .5s;
   transition: .5s;
   font-weight: 500;
+  line-height: 1.4;
 }
 
 header nav .all_sections_parant .ul_sub_menu .anc_sub_menu:hover {
@@ -1205,7 +1210,7 @@ footer .ul_social a:hover {
 
 .new .slid_div_n .img_div {
   border: 1px solid #f2f2f2;
-  padding: 40px 10px;
+  padding: 19px 10px;
 }
 
 .new .slid_div_n .img_div .anc_new {
@@ -1268,7 +1273,7 @@ footer .ul_social a:hover {
 }
 
 .Computer .slid_div_n .img_div {
-  padding: 40px 5px;
+  padding: 25px 5px;
 }
 
 @media only screen and (max-width: 767px) {
