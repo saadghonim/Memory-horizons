@@ -125,13 +125,13 @@ footer{
 }
 @include sm{
   footer{
-    padding: 50px 0 20px;
+    padding: 60px 0 20px;
     .logo{
       text-align: center;
       margin-bottom: 20px;
     }
     .social_media{
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
     .ul_social{
       justify-content: center;
@@ -243,6 +243,9 @@ footer{
             text-align: center;
             order: 3;
           }
+        }
+        .visa{
+          margin-bottom: 20px;
         }
         .tasawk_logo{
           margin-inline-start: 3px;
