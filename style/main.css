@@ -1168,9 +1168,16 @@ footer .ul_social a:hover {
           justify-content: center;
 }
 
-.new .owl-nav button.owl-next:hover,
-.new .owl-nav button.owl-prev:hover {
-  color: #0e6cab;
+.new .owl-nav button.owl-next svg,
+.new .owl-nav button.owl-prev svg {
+  fill: #cdcdcd;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.new .owl-nav button.owl-next:hover svg,
+.new .owl-nav button.owl-prev:hover svg {
+  fill: #0e6cab;
 }
 
 .new .owl-nav button.owl-next {

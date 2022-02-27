@@ -135,8 +135,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  svg{
+  fill:#cdcdcd;
+  transition:.5s  }
   &:hover{
-    color: $main_color;
+    svg{
+      fill: $main_color;
+
+    }
   }
 }
 button.owl-next{
