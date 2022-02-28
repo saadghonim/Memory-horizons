@@ -20,6 +20,9 @@ body {
   .anc_gh:hover {
     text-decoration: none;
   }
+  .anc_gh:focus {
+    text-decoration: none;
+  }
   .btn_gh {
     border          : none;
     padding         : 0;
@@ -79,13 +82,16 @@ body {
     justify-content: center;
     flex-direction: column;
     img{
-      &:first-child{
         margin-bottom: 20px;
         animation: spin 2s linear infinite;
-      }
       @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(-360deg); }
+      }
+    }
+    @include xs{
+      img{
+        width: 110px;
       }
     }
 }

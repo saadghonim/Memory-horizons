@@ -63,6 +63,10 @@ body {
   text-decoration: none;
 }
 
+.anc_gh:focus {
+  text-decoration: none;
+}
+
 .btn_gh {
   border: none;
   padding: 0;
@@ -142,7 +146,7 @@ img {
           flex-direction: column;
 }
 
-.preloader-sa img:first-child {
+.preloader-sa img {
   margin-bottom: 20px;
   -webkit-animation: spin 2s linear infinite;
           animation: spin 2s linear infinite;
@@ -167,6 +171,12 @@ img {
   100% {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .preloader-sa img {
+    width: 110px;
   }
 }
 
@@ -429,8 +439,22 @@ header nav .nav .ul_nav li .all_sections {
           margin-inline-end: 0px !important;
 }
 
+header nav .nav .ul_nav li .all_sections span {
+  display: block;
+}
+
 header nav .nav .ul_nav li:not(:first-child) .anc_nav:hover {
   color: #0e6cab;
+}
+
+header nav .nav .ul_nav li .all_sections::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f107";
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 header nav .nav .ul_nav .all_hover {
@@ -524,7 +548,6 @@ header nav .nav .ul_nav .all_hover .sub_hover:hover .ul_sub_menu {
 header nav .nav .ul_nav .all_hover .sub_hover .ul_sub_menu {
   position: absolute;
   top: -10px;
-  left: -104%;
   background-color: #ffffff;
   width: 100%;
   padding: 10px 10px 15px;
@@ -533,6 +556,14 @@ header nav .nav .ul_nav .all_hover .sub_hover .ul_sub_menu {
   z-index: -1;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+html[dir="rtl"] header nav .nav .ul_nav .all_hover .sub_hover .ul_sub_menu {
+  left: -104%;
+}
+
+html[dir="ltr"] header nav .nav .ul_nav .all_hover .sub_hover .ul_sub_menu {
+  right: -104%;
 }
 
 header nav .nav .ul_nav .all_hover .sub_hover .ul_sub_menu li:not(:last-child) .anc_sub_menu {
@@ -619,16 +650,31 @@ header nav .nav .ul_nav .anc_nav span i {
   header .header .user_div .btn_heart {
     display: none;
   }
+  header .header .input_div input {
+    height: 40px;
+  }
+  header .header .input_div .btn_search {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
   header nav {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     z-index: 20;
-    padding: 100px 0;
+    padding: 100px 0 30px;
     -webkit-transition: .5s;
     transition: .5s;
     overflow-y: auto;
+    overflow-x: hidden;
+  }
+  html[dir="rtl"] header nav {
+    right: -100%;
+  }
+  html[dir="ltr"] header nav {
+    left: -100%;
   }
   header nav .close_ {
     display: block;
@@ -710,27 +756,19 @@ header nav .nav .ul_nav .anc_nav span i {
   }
   header nav .sub_hover .ul_sub_menu li {
     padding: 0;
+    -webkit-margin-start: 10px;
+            margin-inline-start: 10px;
+  }
+  header nav .nav .ul_nav {
+    width: 100%;
+  }
+  header nav .nav .ul_nav li {
+    width: 100%;
   }
   header nav .nav .ul_nav .order_ {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-  }
-  header nav .nav .ul_nav .all_sections span {
-    position: relative;
-  }
-  header nav .nav .ul_nav .all_sections span i {
-    position: absolute;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    top: 41%;
-    font-size: 12px;
-  }
-  html[dir="ltr"] header nav .nav .ul_nav .all_sections span i {
-    right: -5px;
-  }
-  html[dir="rtl"] header nav .nav .ul_nav .all_sections span i {
-    left: -5px;
   }
   header nav .nav .ul_nav .all_hover {
     -webkit-margin-end: 0;
@@ -742,10 +780,13 @@ header nav .nav .ul_nav .anc_nav span i {
     padding: 0;
     -webkit-margin-end: 0;
             margin-inline-end: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
   header nav .nav .ul_nav .all_hover .anc_nav span {
-    -webkit-margin-end: 10px;
-            margin-inline-end: 10px;
+    -webkit-margin-end: 5px;
+            margin-inline-end: 5px;
   }
   header nav .nav .ul_nav .all_hover .anc_nav span i {
     display: none;
@@ -783,8 +824,8 @@ header nav .nav .ul_nav .anc_nav span i {
     padding: 0;
     color: #8488ce;
     margin-bottom: 10px;
-    -webkit-margin-start: 20px;
-            margin-inline-start: 20px;
+    -webkit-margin-start: 10px;
+            margin-inline-start: 10px;
   }
   header nav .nav .ul_nav .all_hover .ul_menu li:not(:last-child) > .anc_sub_menu {
     border-bottom: none;
@@ -1010,6 +1051,14 @@ footer .ul_social a:hover {
   }
   footer .newslatter {
     padding-top: 40px;
+  }
+  footer .newslatter .input_div input {
+    height: 40px;
+  }
+  footer .newslatter .input_div .btn_newsla {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
   }
   footer .newslatter .f_btn {
     font-size: 16px;

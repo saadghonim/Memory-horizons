@@ -157,6 +157,16 @@ footer{
     }
     .newslatter{
       padding-top: 40px;
+      .input_div {
+        input{
+          height: 40px;
+        }
+        .btn_newsla{
+          width: 30px;
+          height: 30px;
+          font-size: $font_s - 2;
+        }
+      }
     .f_btn{
       font-size: $font_s;
       text-align: center;

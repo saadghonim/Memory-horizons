@@ -152,12 +152,28 @@ header{
           }
             .all_sections{
               margin-inline-end: 0px!important;
+              span{
+                display: block;
+              }
             }
           &:not(:first-child){
             .anc_nav{
               &:hover{
                 color: $main_color;
               }
+            }
+          }
+        }
+        li{
+          .all_sections{
+              &::after {
+                font-family: "Font Awesome 5 Free";
+                content: "\f107";
+                color: #ffffff;
+                font-size: 12px;
+                font-weight: 900;
+                -webkit-transition: .5s;
+                transition: .5s;
             }
           }
         }
@@ -235,7 +251,6 @@ header{
             .ul_sub_menu{
             position: absolute;
             top: -10px;
-            left: -104%;
             background-color: $color_1;
             width: 100%;
             padding: 10px 10px 15px;
@@ -243,6 +258,13 @@ header{
             visibility: hidden;
             z-index: -1;
             transition: .5s;
+            @include ar{
+              left: -104%;
+              }
+            @include en{
+            right: -104%;
+
+            }
             li{
               &:not(:last-child){
               .anc_sub_menu{
@@ -327,6 +349,17 @@ header{
         display: none;
       }
     }
+      .input_div{
+        input {
+          height: 40px;
+        }
+        .btn_search{
+          width: 30px;
+          height: 30px;
+          font-size: $font_s - 2;
+        }
+      } 
+
     }
     nav{
       position: absolute;
@@ -334,15 +367,16 @@ header{
       width: 100%;
       height: 100%;
       z-index: 20;
-      padding: 100px 0;
+      padding: 100px 0 30px;
       transition: .5s;
       overflow-y: auto;
-      // @include ar{
-      //   right:-100%
-      // }
-      // @include en{
-      //   left:-100%
-      // }
+      overflow-x: hidden;
+      @include ar{
+        right:-100%
+      }
+      @include en{
+        left:-100%
+      }
       .close_{
         display: block;
         position: absolute;
@@ -413,32 +447,18 @@ header{
         padding: 0;
         li{
           padding: 0;
-
+          margin-inline-start: 10px;
         }
         }
       }
   .nav {
     .ul_nav {
+      width: 100%;
+      li{
+        width:100%;
+      }
       .order_{
         order: -1;
-      }
-      .all_sections{
-        span{
-          position: relative;
-          i{
-            position: absolute;
-            transform: translateY(-50%);
-            top: 41%;
-            @include en{
-              right: -5px;
-            }
-            @include ar{
-              left: -5px;
-            }
-            font-size: 12px;
-          }
-        }
-
       }
       .all_hover{
         margin-inline-end: 0;
@@ -447,11 +467,12 @@ header{
           width:auto;
           padding: 0;
           margin-inline-end: 0;
+          display: inline-flex;
           span{
             i{
               display: none;
             }
-            margin-inline-end: 10px;
+            margin-inline-end: 5px;
           }
         }
         .sub_hover{
@@ -492,7 +513,7 @@ header{
               padding: 0;
               color: $color_6;
               margin-bottom: 10px;
-            margin-inline-start: 20px;
+            margin-inline-start: 10px;
 
             }
 
