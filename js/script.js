@@ -6,13 +6,15 @@ $(window).load(function() {
 $(document).ready(function(){
 
 //~~~~~~~~~~~~~nav~~~~~~~~
-
 if ($(window).width() <= 767){
   $(".all_sections").click(function(){
-    $(".ul_sub_menu").slideToggle("500")
+    $(this).next().slideToggle("500")
+  });
+  $(".sub_hover").click(function(){
+    $(this).children().next().slideToggle("500")
   })
+};
 
-}
 // ~~~~~~~~~~start slider~~~~~~~~
 $('.slider .owl-carousel').owlCarousel({
     loop:true,

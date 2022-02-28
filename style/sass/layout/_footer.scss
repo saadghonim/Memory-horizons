@@ -17,6 +17,7 @@ footer{
       line-height: 2;
       transition: .5s;
       color: $color_6;
+      text-transform: capitalize;
       &:hover{
         color: $color_1;
         @include ar{transform: translateX(-5px);}
