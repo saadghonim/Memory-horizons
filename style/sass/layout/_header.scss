@@ -205,6 +205,7 @@ header{
             z-index: -1;
             transition: .5s;
             z-index: 1111;
+            margin-bottom: 10px;
             @include ar{
               right: 0;
             }
@@ -258,6 +259,7 @@ header{
             visibility: hidden;
             z-index: -1;
             transition: .5s;
+            margin-bottom: 10px;
             @include ar{
               left: -104%;
               }
