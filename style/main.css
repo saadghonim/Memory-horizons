@@ -526,6 +526,10 @@ header nav .nav .ul_nav .all_hover .ul_menu .anc_sub_menu:hover {
   color: #0e6cab;
 }
 
+header nav .nav .ul_nav .all_hover .ul_menu .anc_sub_menu i {
+  font-size: 12px;
+}
+
 header nav .nav .ul_nav .all_hover:hover {
   cursor: pointer;
 }
